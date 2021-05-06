@@ -160,3 +160,6 @@ tools/gulp-tasks/cldr/cldr-data/
 
 # Husky
 .husky/_
+
+config.json
+config.js

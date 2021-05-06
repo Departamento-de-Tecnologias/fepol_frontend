@@ -1,0 +1,25 @@
+.side-bar {
+  position: fixed;
+  top: 50%;
+  right: -0.1%;
+  margin-top: 0%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border-radius: 0.25rem;
+  z-index: 100;
+}
+
+.side-bar a {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.side-bar a:hover {
+  cursor: pointer;
+}
