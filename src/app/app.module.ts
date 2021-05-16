@@ -12,6 +12,7 @@ import { ApiConfig } from './backend/tasks/backend.config';
 export function initializeApp(apiConfig: ApiConfig) {
   return () => apiConfig.load();
 }
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

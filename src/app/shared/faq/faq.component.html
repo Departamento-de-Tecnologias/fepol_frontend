@@ -1,0 +1,17 @@
+<app-header app-theme></app-header>
+<div class="contenedor">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Preguntas más frecuentes de los estudiantes</h1>
+        </div>
+      </div>
+</div>
+<div class="contenedor" *ngFor = "let info of faq.preguntas" >
+  <div id="pregunta">
+    <h4 class="m-4">{{info.pregunta}}</h4>
+    <p class="mx-5">{{info.respuesta}}</p>
+    <hr />
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,15 @@
+html, body{
+    height: 100%;
+    background-color: #000;
+  }
+  
+  .contenedor{
+    height: 49%;
+    margin: 1% 1%;
+  }
+.jumbotron{
+    background-image: url("https://drive.google.com/uc?export=view&id=1HDlHOBmtYNXdAPZ79zOGwEFs0YSWA-kr");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
