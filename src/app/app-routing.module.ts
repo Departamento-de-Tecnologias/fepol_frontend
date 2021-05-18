@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FaqComponent } from './shared/faq/faq.component';
-import { HomeComponent } from './shared/home/home.component';
+import { FaqPageComponent } from './base/layouts/faq-page/faq-page.component';
+import { HomePageComponent } from './base/layouts/home-page/home-page.component';
 //Recordatorio a mi futuro, crear 404
 const routes: Routes = [
-  {path:'preguntas-frecuentes',component:FaqComponent},
-  {path:'', component:HomeComponent , pathMatch: 'full'},
+  {path:'preguntas-frecuentes',component:FaqPageComponent},
+  {path:'', component:HomePageComponent , pathMatch: 'full'},
   {path:'**', redirectTo:''}
 ];
 
