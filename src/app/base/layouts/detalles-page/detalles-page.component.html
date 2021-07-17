@@ -1,0 +1,95 @@
+<app-header></app-header>
+<div class="imagenPrincipal">
+  <img [src]="detalles.img" alt="" />
+</div>
+<div>
+  <h1 class="mx-3">{{ detalles.name }}</h1>
+  <p class="p-4">{{ detalles.description }}</p>
+</div>
+<div class="row px-5">
+  <div *ngIf = "detalles.mision != ''" class="col-lg-4">
+    <h3 class="mx-3">Misión</h3>
+    <p>{{ detalles.mision }}</p>
+  </div>
+  <div *ngIf = "detalles.vision != ''" class="col-lg-4">
+    <h3 class="mx-3">Visión</h3>
+    <p>{{ detalles.vision }}</p>
+  </div>
+</div>
+<div *ngIf = "detalles.redes.length > 1"><h2 class="mx-3">Contacto:</h2></div>
+<div class="row px-5">
+  <a
+    *ngIf="detalles.redes.facebook != undefined"
+    class="btn btn-primary btn-floating m-1"
+    style="background-color: #3b5998"
+    target="_blank"
+    [href]="detalles.redes.facebook"
+    role="button"
+    ><svg
+      width="20"
+      height="20"
+      fill="currentColor"
+      class="bi bi-facebook"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+      /></svg
+  ></a>
+  <a
+    *ngIf="detalles.redes.twitter != undefined"
+    class="btn btn-primary btn-floating m-1"
+    style="background-color: #55acee"
+    [href]="detalles.redes.twitter"
+    target="_blank"
+    role="button"
+    ><i class="fab fa-twitter"></i
+  ></a>
+
+  <a
+    *ngIf="detalles.redes.instagram != undefined"
+    class="btn btn-primary btn-floating m-1"
+    style="background-color: #ac2bac"
+    [href]="detalles.redes.instagram"
+    target="_blank"
+    role="button"
+    ><i class="fab fa-instagram"></i
+  ></a>
+  <a
+    *ngIf="detalles.redes.youtube != undefined"
+    class="btn btn-primary btn-floating m-1"
+    style="background-color: #c4302b"
+    [href]="detalles.redes.youtube"
+    target="_blank"
+    role="button"
+    ><i class="fab fa-youtube"></i
+  ></a>
+  <a
+    *ngIf="detalles.redes.tiktok != undefined"
+    class="btn btn-primary btn-floating m-1"
+    style="background-color: #ffffff"
+    [href]="detalles.redes.tiktok"
+    target="_blank"
+    role="button"
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      aria-hidden="true"
+      focusable="false"
+      width="1em"
+      height="1em"
+      style="
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      "
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12.525.02c1.31-.02 2.61-.01 3.91-.02c.08 1.53.63 3.09 1.75 4.17c1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97c-.57-.26-1.1-.59-1.62-.93c-.01 2.92.01 5.84-.02 8.75c-.08 1.4-.54 2.79-1.35 3.94c-1.31 1.92-3.58 3.17-5.91 3.21c-1.43.08-2.86-.31-4.08-1.03c-2.02-1.19-3.44-3.37-3.65-5.71c-.02-.5-.03-1-.01-1.49c.18-1.9 1.12-3.72 2.58-4.96c1.66-1.44 3.98-2.13 6.15-1.72c.02 1.48-.04 2.96-.04 4.44c-.99-.32-2.15-.23-3.02.37c-.63.41-1.11 1.04-1.36 1.75c-.21.51-.15 1.07-.14 1.61c.24 1.64 1.82 3.02 3.5 2.87c1.12-.01 2.19-.66 2.77-1.61c.19-.33.4-.67.41-1.06c.1-1.79.06-3.57.07-5.36c.01-4.03-.01-8.05.02-12.07z"
+        fill="#626262"
+      /></svg
+  ></a>
+</div>
+<app-footer></app-footer>
