@@ -1,0 +1,14 @@
+<app-header app-theme></app-header>
+<section id="galeria" class="container">
+
+    <div class="text-center py-2">
+        <h1>Clubes y Asociaciones</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4" *ngFor = "let info of clubesAsos.info">
+            <img [src] = info.img alt="" [routerLink] = "['/clubes-asos',info.id]">
+        </div>    
+    </div> 
+</section>
+<app-footer></app-footer>

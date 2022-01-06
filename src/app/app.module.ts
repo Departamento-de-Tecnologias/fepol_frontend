@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BaseModule } from './base/base.module';
 import { SharedModule } from './shared/shared.module';
+import { ApiConfig } from './backend/tasks/backend.config';
+import { DetallesPageComponent } from './base/layouts/detalles-page/detalles-page.component';
+
+export function initializeApp(apiConfig: ApiConfig) {
+  return () => apiConfig.load();
+}
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,7 +24,15 @@ import { SharedModule } from './shared/shared.module';
     BaseModule,
     SharedModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    ApiConfig,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      deps: [ApiConfig],
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
