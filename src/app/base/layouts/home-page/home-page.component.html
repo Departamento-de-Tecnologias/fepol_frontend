@@ -1,28 +1,27 @@
 <app-header app-theme></app-header>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
         <img class="d-block w-100" src="https://drive.google.com/uc?export=view&id=1Ew9L1SMr98fknRMHG_b5qbYOLy35A7Q6"
           alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://drive.google.com/uc?export=view&id=1Twhjw2pWHbwm5Wmqe7Z_hwlzCGcyc516"
-          alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://drive.google.com/uc?export=view&id=1jxZTlPvASMn8Idbv7XDhg4UVihwMtW0y"
-          alt="Third slide">
-      </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://drive.google.com/uc?export=view&id=1Twhjw2pWHbwm5Wmqe7Z_hwlzCGcyc516"
+      alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://drive.google.com/uc?export=view&id=1jxZTlPvASMn8Idbv7XDhg4UVihwMtW0y">
+    </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
   <!--Main-->
   <section class="text-center">
     <app-floating-sidebar></app-floating-sidebar>
@@ -32,44 +31,38 @@
       <hr class="bg-light border-2">
       <div class="container">
         <div class="row">
-          <div class="col-sm"><a class="text-decoration-none" target="_blank" href="http://vinculacion.espol.edu.ec/contenido/preguntas-frecuentes">
+          <div class="col-sm m-4"><a class="text-decoration-none" target="_blank" href="http://vinculacion.espol.edu.ec/contenido/preguntas-frecuentes-0#overlay-context=user">
               <h4>Preguntas Frecuentes</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis cupiditate sint sed eaque,
-                repellendus corporis deserunt voluptas necessitatibus ducimus amet dolore a porro labore ab sapiente
-                tempora, quo autem!</p>
+              <p class="text-justify">Las preguntas más frecuentes contestadas por ESPOL</p>
             </a></div>
-          <div class="col-sm"><a class="text-decoration-none" target="_blank"
+          <div class="col-sm m-4"><a class="text-decoration-none" target="_blank"
               href="http://www.fimcp.espol.edu.ec/sites/fimcp.espol.edu.ec/files/Guia%20Anulaci%C3%B3n%20Asignaturas%2024%2007%202020.pdf">
               <h4>Guía para anulación de registro</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis cupiditate sint sed eaque,
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis cupiditate sint sed eaque,
                 repellendus corporis deserunt voluptas necessitatibus ducimus amet dolore a porro labore ab sapiente
                 tempora, quo autem!</p>
             </a></div>
-          <div class="col-sm">
+          <div class="col-sm m-4">
             <a target="_blank" class="text-decoration-none"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe2hyfkth8Xgi6Y43NMQDw9FUXql0Audh_-xg_OoavBfbvRhw/viewform">
-              <h4>Registro en habilidades blandas</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis cupiditate sint sed eaque,
-                repellendus corporis deserunt voluptas necessitatibus ducimus amet dolore a porro labore ab sapiente
-                tempora, quo autem!</p>
+              href="http://ceproem.espol.edu.ec/Vistas/inicio/feriaPracticasEmpresariales.aspx">
+              <h4>Feria Prácticas Empresariales</h4>
+              <p class="text-justify">Politécnico, te invitamos a participar en la Feria Virtual de Prácticas Empresariales ESPOL 2022. Registrate en el portal del CEPROEM </p>
             </a>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm">
-            <a target="_blank" class="text-decoration-none" href="http://normativainterna.espol.edu.ec/">
-              <h4>Normativa Interna de la ESPOL</h4>
+          <div class="col-sm m-4">
+            <a target="_blank" class="text-decoration-none" href="">
+              <h4>Elecciones 2022</h4>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis cupiditate sint sed eaque,
                 repellendus corporis deserunt voluptas necessitatibus ducimus amet dolore a porro labore ab sapiente
                 tempora, quo autem!</p>
             </a>
           </div>
-          <div class="col-sm">
-            <a target="_blank" class="text-decoration-none" href="https://www.instagram.com/p/CKuDyAjhT5W/">
+          <div class="col-sm m-4">
+            <a target="_blank" class="text-decoration-none" href="https://www.instagram.com/p/CW7J0ttsFUK/">
               <h4>Logros de FEPOL</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis cupiditate sint sed eaque,
-                repellendus corporis deserunt voluptas necessitatibus ducimus amet dolore a porro labore ab sapiente
-                tempora, quo autem!</p>
+              <p>La Federación presenta sus logros en instagram, mes de noviembre</p>
             </a>
           </div>
         </div>
@@ -84,33 +77,32 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          <div class="nav flex-column nav-pills text-left" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <h4>Directiva</h4>
-            <a class="nav-link active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-Presidenta" role="tab"
-              aria-controls="v-pills-home" aria-selected="true">Presidenta</a>
-            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-Vicepresidencia" role="tab"
-              aria-controls="v-pills-profile" aria-selected="false">Vicepresidencia</a>
-            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-Secretaria" role="tab"
-              aria-controls="v-pills-messages" aria-selected="false">Secretaria</a>
-            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-Tesorera" role="tab"
-              aria-controls="v-pills-settings" aria-selected="false">Tesorera</a>
-            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-VPS" role="tab"
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <h4 class="me-auto">Directiva</h4>
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Presidenta" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Presidencia</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Vicepresidencia" role="tab" type="button"
+              aria-controls="v-pills-profile" aria-selected="false">Vicepresidencia</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Secretaria" role="tab"
+            aria-controls="v-pills-messages" aria-selected="false">Secretaria</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Tesorera" role="tab"
+            aria-controls="v-pills-settings" aria-selected="false">Tesorera</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-VPS" role="tab"
               aria-controls="v-pills-settings" aria-selected="false">Vocales Principales y
-              Suplentes</a>
+              Suplentes</button>
             <br>
-            <h4>Vicepresidencias</h4>
-            <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-Academica" role="tab"
-              aria-controls="v-pills-home" aria-selected="false">Académico</a>
-            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-DiseComu" role="tab"
-              aria-controls="v-pills-profile" aria-selected="false">Diseño y Comunicación</a>
-            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-Estudiantil" role="tab"
-              aria-controls="v-pills-messages" aria-selected="false">Bienestar Estudiantil</a>
-            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-ArteCultura" role="tab"
-              aria-controls="v-pills-settings" aria-selected="false">Arte y Cultura</a>
-            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-Administrativo" role="tab"
-              aria-controls="v-pills-settings" aria-selected="false">Administrativo</a>
-            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-Tech" role="tab"
-              aria-controls="v-pills-settings" aria-selected="false">Departamento de Tecnologías </a>
+            <h4 class="me-auto">Vicepresidencias</h4>
+            <button class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Academica" role="tab"
+              aria-controls="v-pills-home" aria-selected="false">Académico</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-DiseComu" role="tab"
+              aria-controls="v-pills-profile" aria-selected="false">Diseño y Comunicación</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Estudiantil" role="tab"
+              aria-controls="v-pills-messages" aria-selected="false">Bienestar Estudiantil</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ArteCultura" role="tab"
+              aria-controls="v-pills-settings" aria-selected="false">Arte y Cultura</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Administrativo" role="tab"
+              aria-controls="v-pills-settings" aria-selected="false">Administrativo</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Tech" role="tab"
+              aria-controls="v-pills-settings" aria-selected="false">Departamento de Tecnologías </button>
           </div>
         </div>
         <div class="col-sm">
@@ -284,7 +276,7 @@
                   <h5 class="card-title">Departamento de Tecnologías</h5>
                   <p class="card-text text-justify">“Somos los encargados de la programación y
                     optimización
-                    de procesos. Realizar proyectos tecnológicos como creación de páginas web para llegar información a la
+                    de procesos. Realizar proyectos tecnológicos como creación de páginas web para llevar información a la
                     comunidad politécnica, así también como programas que faciliten las publicidades de ayudantías y más”.
                   </p>
                 </div>
