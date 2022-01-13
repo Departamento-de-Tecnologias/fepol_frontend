@@ -1,0 +1,31 @@
+.padre{
+ height: 100%;
+ width: 100%;
+ margin: 15% auto;
+}
+
+
+.spinner{
+  border: 0.25rem solid rgb(199, 195, 195);
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border-left-color: rgb(196,0,0);
+  animation: spin 1.25s linear infinite;
+
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
