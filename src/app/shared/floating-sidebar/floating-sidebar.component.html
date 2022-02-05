@@ -1,3 +1,3 @@
-<div class="side-bar">
-  <a (click)="changeTheme()"><i class="fas fa-sun fa-2x"></i></a>
-</div>
+<button class="side-bar" (click)="switchTheme()" id="theme-btn">
+  <i id="theme-icon" class="{{ theme === 'light-theme' ? 'fas fa-sun' : 'fas fa-moon' }}"></i>
+</button>

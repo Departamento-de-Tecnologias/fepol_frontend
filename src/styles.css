@@ -1,14 +1,61 @@
+:root {
+  --white: #ffffff;
+  --black: #000000e1;
+  --bg-white: #f8f9fa;
+  --bg-black: #08090a;
+}
+
+.light-theme {
+  --background-color: var(--white);
+  --text-color: var(--black);
+  --box-color: var(--white);
+  --button-color: var(--white);
+  --bg: var(--bg-white);
+  --box-shadow: 0 15px 25px rgba(0, 0, 0, .1);
+}
+
+.dark-theme {
+  --background-color: var(--black);
+  --text-color: var(--white);
+  --box-color: var(--black);
+  --button-color: var(--black);
+  --bg: var(--bg-black);
+  --box-shadow:: 0 15px 25px rgba(0, 0, 0, .1);
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
-[data-theme="dark"] {
-  --background-color: rgba(0, 0, 0, 0.87);
-  --text-color: #fff;
+a,
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
-[data-theme="light"] {
-  --background-color: #fff;
-  --text-color: #000;
+.alt-bg {
+  background-color: var(--background-color);
+}
+
+.navbar-bg {
+  background-color: var(--bg);
+}
+
+.text {
+  color: var(--text-color);
+}
+
+a.text {
+  color: var(--text-color);
+}
+
+.form-control.navbar-bg.text:focus, .form-select.navbar-bg.text:focus {
+  background-color: var(--bg);
+  color: var(--text-color);
+}
+
+.accordion-button {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }

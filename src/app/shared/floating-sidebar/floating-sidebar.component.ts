@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-floating-sidebar',
@@ -6,14 +7,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./floating-sidebar.component.css'],
 })
 export class FloatingSidebarComponent implements OnInit {
-  private currentTheme = 'light';
+  theme: Theme = 'light-theme';
 
-  constructor() {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.initializeTheme();
+  }
 
-  changeTheme() {
-    let switchToTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
-    this.currentTheme = switchToTheme;
+  initializeTheme = (): void => {
+    let local = localStorage.getItem('theme');
+    if (local) {
+      this.theme = (local as Theme)!;
+    } else {
+      localStorage.setItem('theme', this.theme);
+    }
+    this.renderer.addClass(this.document.body, this.theme);
+  };
+
+  switchTheme() {
+    this.document.body.classList.replace(
+      this.theme,
+      this.theme === 'light-theme'
+        ? (this.theme = 'dark-theme')
+        : (this.theme = 'light-theme')
+    );
+    localStorage.setItem('theme', this.theme);
   }
 }
+
+export type Theme = 'light-theme' | 'dark-theme';
