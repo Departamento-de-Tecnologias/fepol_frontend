@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IResponse } from '../models/iresponse';
 import { ISuborganizacion } from '../models/isuborganizacion';
 import { BaseService } from './base.service';
 
@@ -18,15 +20,11 @@ export class SuborganizacionService extends BaseService {
     super();
   }
 
-  async getAllOrganizations():Promise<ISuborganizacion[]>{
-    return await this.http
-                 .get<ISuborganizacion[]>(this.buildurl('api/organization'))
-                 .toPromise();
-}
+  async getAllSubOrganizations(): Promise<ISuborganizacion[]> {
+    return this.http.get<ISuborganizacion[]>(this.buildurl('suborganizacion/')).toPromise();
+  }
 
-async getOrganization(organizationID:string):Promise<ISuborganizacion>{
- return await this.http
-        .get<ISuborganizacion>(this.buildurl('URL A ID'+organizationID+'/'))
-        .toPromise();
-}
+  getAllSubOrganizationsO(): Observable<IResponse> {
+    return this.http.get<IResponse>(this.buildurl('suborganizacion/'));
+  }
 }

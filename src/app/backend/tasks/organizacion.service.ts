@@ -21,7 +21,7 @@ export class OrganizacionService extends BaseService{
 
    async getAllOrganizations():Promise<IOrganizacion[]>{
         return await this.http
-                     .get<IOrganizacion[]>(this.buildurl('api/organization'))
+                     .get<IOrganizacion[]>(this.buildurl('organization'))
                      .toPromise();
    }
 
