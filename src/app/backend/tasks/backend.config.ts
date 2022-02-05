@@ -1,19 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { IbackendConfig } from '../models/backend.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class ApiConfig {
-  static settings: IbackendConfig;
+  config!: IbackendConfig;
+
   constructor(private http: HttpClient) {}
   load() {
-    const json = 'assets/config.json';
+    const json = './assets/config.json';
     return new Promise<void>((resolve, reject) => {
       this.http
         .get(json)
         .toPromise()
         .then((response) => {
-          ApiConfig.settings = <IbackendConfig> response;
+          this.config = <IbackendConfig> response;
+          environment.serverurl = this.config.baseUrl;
           resolve();
         })
         .catch((response: any) => {
