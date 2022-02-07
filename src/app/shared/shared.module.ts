@@ -6,11 +6,13 @@ import { FloatingSidebarComponent } from './floating-sidebar/floating-sidebar.co
 import { ThemeService } from './theme/theme.service';
 import { RouterModule } from '@angular/router';
 import { LoaderComponent } from './loader/loader.component';
+import { MailboxComponent } from './mailbox/mailbox.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, FloatingSidebarComponent, LoaderComponent],
-  imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent, FooterComponent, FloatingSidebarComponent,LoaderComponent],
+  declarations: [HeaderComponent, FooterComponent, FloatingSidebarComponent, LoaderComponent, MailboxComponent],
+  imports: [CommonModule, RouterModule,FormsModule],
+  exports: [HeaderComponent, FooterComponent, FloatingSidebarComponent,LoaderComponent,MailboxComponent,FormsModule],
   providers: [ThemeService],
 })
 export class SharedModule {}
