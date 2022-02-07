@@ -8,7 +8,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BaseModule } from './base/base.module';
 import { SharedModule } from './shared/shared.module';
 import { ApiConfig } from './backend/tasks/backend.config';
-import { DetallesPageComponent } from './base/layouts/detalles-page/detalles-page.component';
 
 export function initializeApp(apiConfig: ApiConfig) {
   return () => apiConfig.load();
