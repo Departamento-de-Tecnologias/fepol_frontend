@@ -9,3 +9,8 @@
 img.d-block.w-100 {
   object-fit: cover!important;
 }
+
+#nosotros,.card-text{
+  text-align: justify;
+}
+
