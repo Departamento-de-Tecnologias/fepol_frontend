@@ -6,8 +6,9 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-4" *ngFor = "let info of clubesAsos.info">
-            <img [src] = info.img alt="" [routerLink] = "['/clubes-asos',info.id]">
+        <div class="col-6 col-lg-3" *ngFor = "let info of clubesAsos;index as i">
+          <app-loader [loading]="cargando[i]"></app-loader>
+          <img class="img-fluid img-thumbnail d-block" (load)="hola(i)" [src]="info.img" [alt]="info.name" [routerLink] = "['/clubes-asos',info.id]">
         </div>
     </div>
 </section>

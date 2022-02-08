@@ -16,7 +16,7 @@ export class DetallesPageComponent implements OnInit {
   constructor(private route:ActivatedRoute,public clubesAsos:ClubesService) {
     route.params.subscribe (data =>{
         this.id = parseInt(data['id']);
-        clubesAsos.detalles().subscribe(res => {
+        clubesAsos.cargarInfo().subscribe(res => {
           this.clubes = res;
           this.detalles = this.clubes[this.id - 1];
         })
@@ -24,7 +24,6 @@ export class DetallesPageComponent implements OnInit {
     };
 
   ngOnInit(): void {
-
   }
 
 }

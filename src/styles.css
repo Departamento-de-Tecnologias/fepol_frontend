@@ -3,6 +3,7 @@
   --black: #000000e1;
   --bg-white: #f8f9fa;
   --bg-black: #08090a;
+  --azul-fepol: linear-gradient(90deg, rgba(0,134,255,1) 0%, rgba(0,138,255,1) 53%, rgba(0,134,255,1) 100%);
 }
 
 .light-theme {
@@ -12,6 +13,8 @@
   --button-color: var(--white);
   --bg: var(--bg-white);
   --box-shadow: 0 15px 25px rgba(0, 0, 0, .1);
+  --content:url("assets/fepol-light.svg");
+  --fepol-nav: var(--azul-fepol);
 }
 
 .dark-theme {
@@ -21,6 +24,8 @@
   --button-color: var(--black);
   --bg: var(--bg-black);
   --box-shadow:: 0 15px 25px rgba(0, 0, 0, .1);
+  --content:url("assets/fepol-dark.svg");
+  --fepol-nav: var(--bg-white);
 }
 
 body {
@@ -39,13 +44,15 @@ a,
 }
 
 .navbar-bg {
-  background-color: var(--bg);
+  background: var(--fepol-nav);
 }
 
 .text {
   color: var(--text-color);
 }
-
+.alt-text{
+  color:var(--bg);
+}
 a.text {
   color: var(--text-color);
 }
@@ -58,4 +65,17 @@ a.text {
 .accordion-button {
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+
+.logo{
+  width: 50vw;
+  content: var(--content);
+}
+
+@media screen and (min-width:795px) {
+  .logo{
+    width:15vw;
+  }
+
 }
